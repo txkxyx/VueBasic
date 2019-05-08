@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="form">
+      <div>Form</div>
+      <div class="container-fluid">
+        <table class="table table-bordered">
+          <colgroup>
+            <col width="50%" />
+            <col width="50%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Form</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="form-group mb-0">
+                  <label>Text</label>
+                  <input v-model="text" type="text" class="form-control" />
+                </div>
+              </td>
+              <td>
+                {{ text }}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="form-group mb-0">
+                  <label>Textarea</label>
+                  <textarea v-model="textarea" class="form-control"></textarea>
+                </div>
+              </td>
+
+              <td>
+                {{ textarea }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="/form/form.js"></script>
+</html>

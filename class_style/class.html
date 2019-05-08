@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .text-error {
+        color: red;
+        background: #feeeea;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="class">
+      <div>
+        <h1>Welcome to Vue</h1>
+        <p
+          v-for="message in messages"
+          class="text"
+          :class="{'text-error':message.error}"
+        >
+          {{ message.text }}
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="/class_style/class.js"></script>
+</html>

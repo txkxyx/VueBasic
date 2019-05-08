@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="check">
+      <div class="container-fluid">
+        <table class="table table-bordered">
+          <colgroup>
+            <col width="50%" />
+            <col width="50%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Form</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="form-group mb-0">
+                  <label>CheckBox</label>
+                  <p class="mb-1">
+                    <input
+                      type="checkbox"
+                      v-model="tools.webpack"
+                      id="check1"
+                    />
+                    <label for="check1">Webpack</label>
+                  </p>
+                  <p class="mb-1">
+                    <input type="checkbox" v-model="tools.babel" id="check2" />
+                    <label for="check2">Babel</label>
+                  </p>
+                  <p class="mb-1">
+                    <input type="checkbox" v-model="tools.yarn" id="check3" />
+                    <label for="check3">Yarn</label>
+                  </p>
+                </div>
+              </td>
+              <td>
+                {{ tools }}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="form-group mb-0">
+                  <label>CheckBox2</label>
+                  <p class="mb-1">
+                    <input
+                      type="checkbox"
+                      v-model="foods"
+                      id="check4"
+                      value="🍕"
+                    />
+                    <label for="check4">Pizza</label>
+                  </p>
+                  <p class="mb-1">
+                    <input
+                      type="checkbox"
+                      v-model="foods"
+                      id="check5"
+                      value="🍩"
+                    />
+                    <label for="check5">Donut</label>
+                  </p>
+                  <p class="mb-1">
+                    <input
+                      type="checkbox"
+                      v-model="foods"
+                      id="check6"
+                      value="🍣"
+                    />
+                    <label for="check6">Sushi</label>
+                  </p>
+                </div>
+              </td>
+              <td>
+                <span v-for="food in foods">{{ food }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="/form/check.js"></script>
+</html>
